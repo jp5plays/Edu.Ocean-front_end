@@ -1,0 +1,85 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #101728; /* Cor de fundo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner do login */
+.login-container {
+    width: 500px;
+    height: 600px;
+    background-color: #3B4D66; /* Fundo cinza para o contêiner */
+    border-radius: 20px; /* Borda arredondada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Título */
+.login-container h1 {
+    color: #ffffff; /* Cor branca */
+    font-size: 50px; /* Tamanho do texto */
+    margin-bottom: 40px;
+}
+
+/* Campos de entrada */
+/* Campos de entrada */
+#email, #senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 60px;
+    background-color: #3B4D66; /* Cor do fundo igual à página */
+    border: 2px solid #ffffff; /* Bordas brancas */
+    border-radius: 8px; /* Borda arredondada */
+    margin-bottom: 30px; /* Espaçamento entre as inputs */
+    padding: 0 16px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho do texto */
+    color: #ffffff; /* Cor do texto branca */
+    box-shadow: none; /* Removendo a sombra */
+}
+
+/* Placeholder estilizado */
+#email::placeholder, #senha::placeholder {
+    color: #ffffff; /* Cor branca para o placeholder */
+    opacity: 0.7; /* Levemente transparente */
+}
+
+
+/* Botão de entrar */
+.login-button {
+    margin-left: 50px;
+    width: 384px;
+    height: 70px;
+    background-color: #7C5CBF; /* Cor do botão */
+    color: #ffffff; /* Cor do texto */
+    border: none;
+    border-radius: 8px; /* Borda arredondada */
+    font-size: 20px; /* Tamanho do texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+.login-button:hover {
+    background-color: #6a50a8; /* Cor mais escura ao passar o mouse */
+}
+
+/* Texto "Ainda não possui login?" */
+.no-login {
+    margin-top: 40px; /* Espaçamento entre o botão e o texto */
+    color: #ffffff; /* Cor branca */
+    font-size: 16px; /* Tamanho do texto */
+    text-align: center;
+}

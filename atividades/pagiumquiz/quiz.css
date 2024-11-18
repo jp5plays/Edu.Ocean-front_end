@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased; 
+}
+
+
+
+:root {
+    --dark-blue: #101728;
+    --light-blue: #BCE5E5;
+    --vermei: #c70a0a;
+    --green: #149410;
+    --gre: #97fcfc;
+    --shadow: #8da2b6;
+    --white: #f4f4f4;
+    --purple:#a729f5;
+}
+
+body.escuro{
+    --dark-blue: #BCE5E5;
+    --light-blue: #101728 ;
+    --bg-color:#313e51;
+    --bg-mobile: url(./assets/images/pattern-background-mobile-dark.svg);
+    --bg-desktop:url(./assets/images/pattern-background-desktop-dark.svg);
+    --primary-text-color: #fff;
+    --secondary-text-color:#abc1e1;
+    --button-bg:#3b4d66;
+    --shadow:0px 16px 40px 0px rgba(49,62,81,0.14);
+    --white:#101728;
+
+}
+
+
+header{
+    height:84px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1160px;
+    margin-inline: auto;
+    }
+
+body{
+   height: 1000shv;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   background-color: var(--dark-blue);
+   
+
+}
+
+main{
+    margin-top: -60px;
+}
+
+.tema{
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tema img{
+    width: 16px;
+}
+
+.tema button{
+    margin-top: -40px;
+    height: 20px;
+    width: 32px;
+    background: var(--purple);
+    border: 0;
+    border-radius: 999px;
+    padding: 4px;
+    display: flex;
+    cursor: pointer;
+    
+    
+}
+
+.tema button div{
+    background: var(--white);
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    display: flex;
+}
+
+.boas_vindas {
+    color: var(--light-blue);
+    margin-left: 4rem;
+}
+
+
+
+.logo img{
+    width: 300px;
+    margin-left: 2rem;
+    padding: -2rem;
+}
+
+main{
+    padding: 32px 24px;
+}
+
+
+.logo img{
+    margin-top: -220px;
+   margin-right: 2rem;
+}
+
+
+.alternativas form div{
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+}
+.pergunta{
+    margin-top: -100px;
+}
+
+.pergunta p{
+    margin-top: 100px;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--light-blue);
+}
+
+#t{
+    font-size: 50px;
+    margin-bottom: 300px;
+    line-height: 50px;
+}
+
+.pergunta h2{
+    margin-bottom: 300px;
+    font-size:80px;
+    font-weight: 500px;
+    color: var(--light-blue);
+   
+}
+.alternativas{
+    margin-top: -80px;
+}
+.alternativas form{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    margin-bottom: 12px;
+}
+
+.alternativas label{
+    display: block;
+    
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    color: var(--light-blue);
+    cursor: pointer;
+
+}
+
+.alternativas label:hover{
+    & span{
+        background: var(--shadow);
+        color: var(--dark-blue);
+    }
+}
+
+.alternativas label:has(input:checked){
+    outline: 3px solid var(--purple);
+
+    & span {
+        background: var(--purple);
+        color:var(--dark-blue) ;
+    }
+
+}
+
+.alternativas label.correta {
+    outline: 3px solid var(--green);  /* Borda verde para a alternativa correta */
+    background: var(--green);
+    color: var(--light-blue);
+}
+
+.alternativas label.errada {
+    outline: 3px solid var(--vermei); /* Borda vermelha para a alternativa errada */
+    background: var(--vermei);
+    color: var(--light-blue);
+}
+
+
+.alternativas label#correta{
+    outline: 3px solid var(--green);
+
+    & span {
+        background: var(--green);
+        color: var(--light-blue);
+    }
+
+}
+
+.alternativas label#errada{
+    outline: 3px solid var(--vermei);
+
+    & span {
+        background: var(--vermei);
+        color: var(--light-blue);
+    }
+
+}
+
+.alternativas div #errada{
+    background: var(--green);
+       
+    
+
+}
+
+.correta {
+    border: 2px solid green;
+    background-color: #d4edda; /* Verde claro */
+}
+
+/* Para alternativa errada */
+.errada {
+    border: 2px solid red;
+    background-color: #f8d7da; /* Vermelho claro */
+}
+
+
+
+.alternativas input {
+    display: none;
+}
+
+.alternativas div{
+    display:flex;
+    align-items: center;
+    gap:16px;
+
+}
+
+.alternativas div span{
+    display:block;
+    width: 40px;
+    height: 40px;
+    background:var(--white);
+    border-radius: 999px;
+    color: var(--dark-blue);
+
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-shrink: 0;
+
+}
+
+.alternativas button{
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background: var(--purple);
+    color: var(--dark-blue);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.alternativas button:hover{
+    background: var(--gre);
+    cursor: pointer;
+    
+}
+
+div[data-valor="certa"] {
+    background-color: green;
+    
+  }
+
+.bolinhas-container{
+    display: flex;
+    margin-top: 500px ;
+    justify-content: space-between;
+    gap: 20px;
+    position: absolute;
+   
+    
+}
+
+.bolinha{
+    justify-content: space-between;
+    margin-left: 0;
+    width: 35px; /* Largura da bolinha */
+    height: 35px; /* Altura da bolinha */
+    background-color:silver; /* Cor de fundo (azul) */
+    border-radius: 50%; 
+    border: 1px solid black;
+    display: flex;
+}
+.verde {
+    background-color: green;
+}
+
+.vermelha {
+    background-color: red;
+}
+@media(min-width:1100px){
+
+    body{
+        background: var(--) var(--); 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    header{
+        margin-block:81px;
+        max-width:1140px;
+        margin-inline: auto;
+    }
+
+    .assunto_icone {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .assunto h1 {
+        font-size: 28px;
+    }
+
+    main{
+        max-width: 1140px;
+        margin-inline: auto;
+
+        display:flex;
+        gap: 30px;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .pergunta{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pergunta p{
+        font-size: 20px;
+        line-height:30px;
+        margin-bottom: 27px;
+
+    }
+
+    .pergunta h2{
+        font-size:36px;
+        line-height:42px
+    }
+
+    .alternativas form{
+        gap:24px;
+        margin-bottom: 24px;
+    }
+
+    .alternativas label{
+        font-size: 22px;
+        padding: 18px 20px;
+        border-radius: 24px;
+    }
+    .alternativas div{
+        gap:32px
+    }
+
+    .alternativas div span {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .alternativas button{
+        font-size: 22px;
+    }
+}
