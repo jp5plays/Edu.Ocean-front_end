@@ -14,7 +14,7 @@ function confirmar_senha() {
         div.removeAttribute("id", "texto");
 
         const mensagem = document.querySelector("#texto");
-        mensagem.innerHTML = "  <strong>Coloque a mesma senha nos dois campos</strong> ";
+        
        
     }
 }
