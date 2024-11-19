@@ -19,7 +19,7 @@ botaoTema.addEventListener("click", () => {
 verificarTema(body, botaoTema);
 
 async function buscarPerguntas() {
-    const urlDados = `http://127.0.0.1:3000/api/quizzes?assunto=${assunto}`;
+    const urlDados = `https://eduocean-backend.vercel.app/api/quizzes?assunto=${assunto}`;
 
     console.log("URL da requisição:", urlDados);
 

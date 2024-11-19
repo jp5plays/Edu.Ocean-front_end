@@ -28,7 +28,7 @@ async function verifyToken(){
         window.location.href = "../login/login.html"
         return
     }
-    const response = await fetch('http://localhost:3000/verify', {
+    const response = await fetch('https://eduocean-backend.vercel.app/verify', {
 
         headers:{
             "Authorization":token

@@ -7,7 +7,7 @@ document.querySelector("#formulario_log").addEventListener("submit" , function(e
       senha
   };
 
-  fetch("http://localhost:3000/api/login", {
+  fetch("https://eduocean-backend.vercel.app/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dadoss)

@@ -2,7 +2,7 @@
 pegarDados()
 async function pegarDados() {
 
-    await fetch("http://localhost:3000/rankin", {
+    await fetch("https://eduocean-backend.vercel.app/rankin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
     }).then(response => response.json()).then(data => {

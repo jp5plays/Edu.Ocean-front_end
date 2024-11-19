@@ -6,7 +6,7 @@ export async function getEmail() {
         return console.log('não tem token')
     }
 
-    const response = await fetch("http://localhost:3000/getemail",{
+    const response = await fetch("https://eduocean-backend.vercel.app/getemail",{
         headers:{
             "Authorization": token
         }

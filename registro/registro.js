@@ -24,7 +24,7 @@ document.querySelector("#formulario").addEventListener("submit", function(event)
 
     const dados = { nome, email, ra, senha };
 
-    fetch("http://localhost:3000/api/registro", {
+    fetch("https://eduocean-backend.vercel.app/api/registro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados)

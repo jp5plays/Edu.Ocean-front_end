@@ -41,7 +41,7 @@ async function  rankin(){
     const dados = {
         pontos,nome,email
     }
-    await fetch("http://localhost:3000/rankin/save",{
+    await fetch("https://eduocean-backend.vercel.app/rankin/save",{
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados)
