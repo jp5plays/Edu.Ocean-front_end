@@ -61,5 +61,8 @@ body {
     width: 200px;
   }
 
+  li{
+    list-style-type: none;
+  }
 
 

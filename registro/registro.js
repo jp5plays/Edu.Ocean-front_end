@@ -2,13 +2,20 @@ function confirmar_senha() {
     const senha = document.querySelector("#senha").value;
     const senha2 = document.querySelector("#confirm_senha").value;
     if (senha !== senha2) {
-       
-        const mensagem = document.querySelector("#mensagem");
-        mensagem.innerHTML = "<strong>Coloque a mesma senha nos dois campos</strong>";
-    } else {
         
-        const mensagem = document.querySelector("#mensagem");
-        mensagem.innerHTML = "";
+        const elemento = document.querySelector("div");
+        elemento.setAttribute("id", "texto");
+
+        const mensagem = document.querySelector("#texto");
+        mensagem.innerHTML = "  <strong>Coloque a mesma senha nos dois campos</strong> ";
+       
+    } else {
+        const div = document.querySelector("div");
+        div.removeAttribute("id", "texto");
+
+        const mensagem = document.querySelector("#texto");
+        mensagem.innerHTML = "  <strong>Coloque a mesma senha nos dois campos</strong> ";
+       
     }
 }
 document.querySelector("#confirm_senha").addEventListener("input", confirmar_senha);
