@@ -1,24 +1,20 @@
-function confirmar_senha() {
-    const senha = document.querySelector("#senha").value;
-    const senha2 = document.querySelector("#confirm_senha").value;
-    if (senha !== senha2) {
+// function confirmar_senha() {
+//     const senha = document.querySelector("#senha").value;
+    
+
+//     const elemento = document.querySelector("div");
+
+//     const mensagem = document.querySelector("#texto");
         
-        const elemento = document.querySelector("div");
-        elemento.setAttribute("id", "texto");
 
-        const mensagem = document.querySelector("#texto");
-        mensagem.innerHTML = "  <strong>Coloque a mesma senha nos dois campos</strong> ";
-       
-    } else {
-        const div = document.querySelector("div");
-        div.removeAttribute("id", "texto");
+//     elemento.setAttribute("id", "texto");
 
-        const mensagem = document.querySelector("#texto");
-        mensagem.innerHTML = "  <strong>Coloque a mesma senha nos dois campos</strong> ";
-       
-    }
-}
-document.querySelector("#confirm_senha").addEventListener("input", confirmar_senha);
+
+    
+
+//     elemento.removeAttribute("id", "texto");
+// }
+// document.querySelector("#confirm_senha").addEventListener("input", confirmar_senha);
 
 document.querySelector("#formulario").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -28,6 +24,13 @@ document.querySelector("#formulario").addEventListener("submit", function(event)
     const email = document.querySelector("#email").value;
     const ra = document.querySelector("#ra").value;
     const senha = document.querySelector("#senha").value;
+    const senha2 = document.querySelector("#confirm_senha").value;
+
+    if (senha !== senha2) {
+        
+        alert("Coloque a mesma senha nos dois campos")
+        return
+    }
 
     const dados = { nome, email, ra, senha };
 
@@ -40,16 +43,15 @@ document.querySelector("#formulario").addEventListener("submit", function(event)
     .then(data => {
       
         if (data.message) {
-           
-            document.querySelector("#mensagem").innerText = data.message;
+        
+            alert(data.message)
         } else {
-          
-            document.querySelector("#mensagem").innerText = "Cadastro realizado com sucesso!";
+            alert("Cadastro realizado com sucesso!")
             window.location.href = "../login/login.html";
+            
         }
     })
     .catch(error => {
-        console.error("Erro:", error);
-        document.querySelector("#mensagem").innerText = "Erro ao cadastrar.";
+        console.log("Erro:", error);
     });
 });
